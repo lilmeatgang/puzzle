@@ -1,0 +1,28 @@
+<html>
+<head>
+  <h1> There is a clue in this poem written by me. The answer is something you cannot see.</h1>
+    <h1 class="header"> Look out in the sky and you will see.</h1>
+  <h2 class="header"> Our universe filled with beauty.</h2>
+  <h3 class="header"> Various planets, stars and galaxies.</h3>
+  <h4 class="header"> Everything that our eyes can see. </h4>
+    <script>
+        function get(eId) {return document.getElementById(eId);};
+        function verify(eId, eVal) {
+            if (eVal !== get(eId).value) {
+                alert('Hint: Rows/Columns (must write in lowercase)');
+                return false;
+            }
+            else return true;
+        };
+        function verifySubmit(eId,eVal) {
+            if (verify(eId,eVal)) get(eId).parentNode.submit();
+        };
+    </script>
+</head>
+<body>
+    <form action="index5.html">
+        <label></label><input  id="love" type="text" placeholder="Answer" onchange="verify(this.id,'love');" /> 
+        <input  type="button" value="submit" onclick="verifySubmit('love','love');" />
+    </form>
+</body>
+</html>

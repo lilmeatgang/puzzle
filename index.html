@@ -1,0 +1,24 @@
+<html>
+<head>
+  <h1 class="header">Th15 w1ll b3 a t35t to d3T3rm1n3 1f y0u c@N tH1nK 0uTs1d3 tH3 B0x.  </h1>
+    <script>
+        function get(eId) {return document.getElementById(eId);};
+        function verify(eId, eVal) {
+            if (eVal !== get(eId).value) {
+                alert('You must not know how to count...');
+                return false;
+            }
+            else return true;
+        };
+        function verifySubmit(eId,eVal) {
+            if (verify(eId,eVal)) get(eId).parentNode.submit();
+        };
+    </script>
+</head>
+<body>
+    <form action="index2.html">
+        <label> Count the numbers: </label><input  id="18" type="number" onchange="verify(this.id,'18');" /> 
+        <input  type="button" value="submit" onclick="verifySubmit('18','18');" />
+    </form>
+</body>
+</html>

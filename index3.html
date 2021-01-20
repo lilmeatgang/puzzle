@@ -1,0 +1,29 @@
+<audio controls>
+    <source src="DNA.mp3" type="audio/mpeg">
+    </audio> 
+<audio controls>
+        <source src="ShottaFlow.mp3" type="audio/mpeg">
+    </audio> 
+<html>
+        <head>
+            <script>
+                function get(eId) {return document.getElementById(eId);};
+                function verify(eId, eVal) {
+                    if (eVal !== get(eId).value) {
+                        alert('You must not know how to listen...');
+                        return false;
+                    }
+                    else return true;
+                };
+                function verifySubmit(eId,eVal) {
+                    if (verify(eId,eVal)) get(eId).parentNode.submit();
+                };
+            </script>
+        </head>
+        <body>
+            <form action="index4.html">
+                <label> Count how many times "I got" and "yeah" is said: </label><input  id="4" type="number" onchange="verify(this.id,'4');" /> 
+                <input  type="button" value="submit" onclick="verifySubmit('4','4');" />
+            </form>
+        </body>
+        </html>
